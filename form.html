@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Survey Form | Campus Study Habits Survey</title>
+   <link rel="stylesheet" href="/style.css">
+   <script src="/app.js" defer></script>
+</head>
+<body>
+   <main>
+      <nav aria-label="Account navigation">
+         <a href="/records">View survey records</a>
+         <button id="logout-button" type="button">Log out</button>
+      </nav>
+
+      <h1>Study Habits Survey</h1>
+      <p>You can return later to update your answers. Survey responses are visible to other signed-in users, so leave out personal details.</p>
+
+      <form id="survey-form" method="post">
+         <fieldset>
+            <legend>Your study habits</legend>
+
+            <label for="place">Favorite place to study</label>
+            <input id="place" name="place" type="text" maxlength="120">
+
+            <label for="time">Typical study time</label>
+            <select id="time" name="time">
+               <option value="">Select a time</option>
+               <option value="Morning">Morning</option>
+               <option value="Afternoon">Afternoon</option>
+               <option value="Evening">Evening</option>
+            </select>
+
+            <fieldset>
+               <legend>How do you prefer to study?</legend>
+               <label>
+                  <input name="preference" type="radio" value="Alone">
+                  Alone
+               </label>
+               <label>
+                  <input name="preference" type="radio" value="With a group">
+                  With a group
+               </label>
+            </fieldset>
+
+            <label for="music">
+               <input id="music" name="music" type="checkbox">
+               I listen to music while studying
+            </label>
+
+            <label for="notes">What helps you focus?</label>
+            <textarea id="notes" name="notes" rows="6" maxlength="1000"></textarea>
+         </fieldset>
+
+         <button type="submit">Save survey</button>
+      </form>
+
+      <p id="survey-status" role="status"></p>
+   </main>
+</body>
+</html>
