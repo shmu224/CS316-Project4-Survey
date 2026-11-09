@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Create Account | Campus Study Habits Survey</title>
+   <link rel="stylesheet" href="/style.css">
+   <script src="/app.js" defer></script>
+</head>
+<body>
+   <main>
+      <h1>Create an account</h1>
+      <p>Make an account to save and update your survey answers.</p>
+
+      <form id="create-form" method="post" novalidate>
+         <label for="username">Username</label>
+         <input id="username" name="username" type="text"
+                autocomplete="username" maxlength="60" required>
+
+         <label for="password">Password</label>
+         <input id="password" name="password" type="password"
+                autocomplete="new-password" maxlength="200" required>
+
+         <button type="submit">Create account</button>
+      </form>
+
+      <p id="create-status" role="status"></p>
+      <p><a href="/">Back to login</a></p>
+   </main>
+</body>
+</html>
