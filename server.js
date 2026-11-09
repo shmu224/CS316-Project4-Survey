@@ -9,7 +9,9 @@ const sessions = new Map();
 const sessionAge = 8 * 60 * 60 * 1000;
 
 fs.mkdirSync(dataDir, { recursive: true });
-if (!fs.existsSync(listFile)) fs.writeFileSync(listFile, "[]\n");
+if (!fs.existsSync(listFile)) {
+   fs.copyFileSync(path.join(__dirname, "accounts.json"), listFile);
+}
 
 const read = file => JSON.parse(fs.readFileSync(file, "utf8"));
 
