@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Survey Records | Campus Study Habits Survey</title>
+   <link rel="stylesheet" href="/style.css">
+   <script src="/app.js" defer></script>
+</head>
+<body>
+   <main>
+      <nav aria-label="Account navigation">
+         <a href="/form">Back to survey form</a>
+         <button id="logout-button" type="button">Log out</button>
+      </nav>
+
+      <h1>Survey Records</h1>
+
+      <section aria-labelledby="stats-heading">
+         <h2 id="stats-heading">Survey Statistics</h2>
+         <ul>
+            <li>Total surveys submitted: <span id="total-submitted">0</span></li>
+            <li>Prefer studying alone: <span id="total-alone">0</span></li>
+            <li>Prefer studying with a group: <span id="total-group">0</span></li>
+         </ul>
+      </section>
+
+      <label for="account-select">Choose an account ID</label>
+      <select id="account-select">
+         <option value="">Select an account</option>
+      </select>
+
+      <p id="records-status" role="status"></p>
+
+      <table id="records-table" hidden>
+         <caption>Selected Account’s Survey Answers</caption>
+         <tbody>
+            <tr>
+               <th scope="row">Favorite place to study</th>
+               <td id="record-place"></td>
+            </tr>
+            <tr>
+               <th scope="row">Typical study time</th>
+               <td id="record-time"></td>
+            </tr>
+            <tr>
+               <th scope="row">Study preference</th>
+               <td id="record-preference"></td>
+            </tr>
+            <tr>
+               <th scope="row">Listens to music while studying</th>
+               <td id="record-music"></td>
+            </tr>
+            <tr>
+               <th scope="row">What helps you focus?</th>
+               <td id="record-notes"></td>
+            </tr>
+         </tbody>
+      </table>
+   </main>
+</body>
+</html>
